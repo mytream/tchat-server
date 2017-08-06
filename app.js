@@ -12,12 +12,8 @@ app.use(cors());
 
 app.use(serve(path.join(__dirname + '/views')));
 
-const apiFriend = require('./api/friend');
-const apiChat = require('./api/chat');
-app.use(apiFriend);
-app.use(apiChat);
-app.use(require('./api/user'));
-app.use(require('./api/message'));
+// 配置路由
+configureRouters(app);
 
 const httpServer = http.createServer(app.callback());
 
