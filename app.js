@@ -13,7 +13,7 @@ app.use(cors());
 app.use(serve(path.join(__dirname + '/views')));
 
 // 配置路由
-configureRouters(app);
+require('./api/configureRouters')(app);
 
 const httpServer = http.createServer(app.callback());
 

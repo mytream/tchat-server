@@ -1,6 +1,6 @@
 module.exports = function (app) {
-  app.use(require('./api/friend'));
-  app.use(require('./api/chat'));
-  app.use(require('./api/user'));
-  app.use(require('./api/message'));
+  app.use(require('./friend'));
+  app.use(require('./chat'));
+  app.use(require('./user'));
+  app.use(require('./message'));
 };
